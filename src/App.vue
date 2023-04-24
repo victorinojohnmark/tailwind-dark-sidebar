@@ -63,10 +63,10 @@
         </div>
 
       </div>
-      <main class="py-10">
+      <main class="lg:py-4 py-6">
         <div class="px-4 sm:px-6 lg:px-4">
           <div class="relative h-96 overflow-hidden rounded-xl border border-dashed bg-gray-100 opacity-75">
-            <svg class="absolute inset-0 h-full w-full stroke-neutral-300" fill="none">
+            <svg class="inset-0 h-full w-full stroke-neutral-300" fill="none">
               <defs>
                 <pattern id="pattern-1526ac66-f54a-4681-8fb8-0859d412f251" x="0" y="0" width="10" height="10"
                   patternUnits="userSpaceOnUse">

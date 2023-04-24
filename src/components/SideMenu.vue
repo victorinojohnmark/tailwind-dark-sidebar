@@ -16,8 +16,7 @@
                 <li>
                     <ul role="list" class="flex flex-col gap-y-1 -mx-2 list-none m-0 p-0">
                         <li>
-                            <a href="#"
-                                class="flex text-white font-semibold text-sm leading-6 p-2 bg-gray-800 rounded-md gap-x-3">
+                            <a href="#" class="flex text-white font-semibold text-sm leading-6 p-2 bg-gray-800 rounded-md gap-x-3" @click="showMobileMenu = false">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                     stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -28,8 +27,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="flex text-gray-400 font-semibold text-sm leading-6 p-2 rounded-md gap-x-3 hover:bg-gray-800 hover:text-white">
+                            <a href="#" class="flex text-gray-400 font-semibold text-sm leading-6 p-2 rounded-md gap-x-3 hover:bg-gray-800 hover:text-white" @click="showMobileMenu = false">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                     stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -40,22 +38,41 @@
                             </a>
                         </li>
                         <li>
-                            <button role="menu" type="button" class="flex justify-between w-full text-gray-400 font-semibold text-sm leading-6 p-2 rounded-md hover:bg-gray-800 hover:text-white">
-                                <div class="flex items-center gap-x-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                        stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z">
-                                        </path>
+                            <div role="menu" class="group overflow-hidden flex flex-col justify-between gap-y-3 h-10 hover:h-full w-full text-gray-400 font-semibold text-sm leading-6 p-2 rounded-md hover:bg-gray-800 hover:text-white">
+                                <div class="flex justify-between w-full">
+                                    <div class="flex items-center gap-x-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z">
+                                            </path>
+                                        </svg>
+                                        Projects
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 place-self-end">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                     </svg>
-                                    Projects
                                 </div>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 place-self-end">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                </svg>
-                                
+                                <ul class="h-0 group-hover:h-full flex flex-col w-full transition-height duration-200 ease-in-out">
+                                    <li>
+                                        <a href="#" class="flex text-gray-400 font-semibold text-sm leading-6 p-2 rounded-md gap-x-3 hover:bg-gray-700 hover:text-white" @click="showMobileMenu = false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="flex-shrink-0 w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            SubItem 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="flex text-gray-400 font-semibold text-sm leading-6 p-2 rounded-md gap-x-3 hover:bg-gray-700 hover:text-white" @click="showMobileMenu = false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="flex-shrink-0 w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            SubItem 2
+                                        </a>
+                                    </li>
+                                </ul>
 
-                            </button>
+                            </div>
                         </li>
                         <li>
                             <a href="#"
